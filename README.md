@@ -2,6 +2,8 @@
 
 This harvests some information from Honeybadger to populate a dashboard page
 
+<img width="615" alt="screen shot 2018-03-06 at 1 01 01 pm" src="https://user-images.githubusercontent.com/92044/37052307-8c68f800-213e-11e8-9fff-e85af802e2a0.png">
+
 ## Harvest:
 
 ```
