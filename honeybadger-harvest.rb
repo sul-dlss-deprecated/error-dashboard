@@ -4,16 +4,17 @@
 
 @token = ARGV[0]
 
+require 'byebug'
 require 'json'
 require 'net/http'
 require 'active_support'
 require 'active_support/core_ext/hash'
 
 def issues_for_project(id)
-  json = api("https://app.honeybadger.io/v2/projects/#{id}/faults")
+  json = api("https://app.honeybadger.io/v2/projects/#{id}/faults?resolved=false")
   json['results'].map do |res|
-    res.slice('notices_count', 'klass', 'message', 'url')
-  end
+    res.slice('notices_count', 'klass', 'message', 'url', 'resolved')
+  end.select { |res| !res['resolved'] }
 end
 
 def project_list
