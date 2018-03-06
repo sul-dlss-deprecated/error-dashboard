@@ -9,8 +9,17 @@ export default {
   name: 'ErrorList',
   data () {
     return {
+      json: null,
       msg: 'Errors go here'
     }
+  },
+  created: function () {
+    // `this` points to the vm instance
+    console.log('json is: ' + this.json)
+    fetch('/top-errors.json')
+      .then((response) => {
+        this.json = response.json()
+      })
   }
 }
 </script>

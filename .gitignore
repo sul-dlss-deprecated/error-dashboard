@@ -17,4 +17,4 @@ selenium-debug.log
 *.sln
 
 # Data harvested from Honeybadger
-data/*.json
+static/*.json

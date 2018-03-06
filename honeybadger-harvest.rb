@@ -45,6 +45,6 @@ def all_issues
 end
 
 
-File.open('top-errors.json', 'w') do |f|
-  f.puts all_issues
+File.open('static/top-errors.json', 'w') do |f|
+  f.puts all_issues.to_json
 end

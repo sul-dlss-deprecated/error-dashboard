@@ -1,6 +1,12 @@
 # error-dashboard
 
-> A Vue.js project
+This harvests some information from Honeybadger to populate a dashboard page
+
+## Harvest:
+
+```
+ruby honeybadger-harvest.rb  <HB_API_KEY>
+```
 
 ## Build Setup
 
