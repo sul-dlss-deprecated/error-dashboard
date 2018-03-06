@@ -41,10 +41,17 @@ def all_issues
     accum << issues_for_project(project['id']).map do |issue|
       issue.merge('project_name' => project['name'])
     end
-  end.flatten.sort { |a, b| a['notices_count'].to_i <=> b['notices_count'].to_i }
+  end
+end
+
+def top_issues
+  all_issues
+    .flatten
+    .sort { |a, b| b['notices_count'].to_i <=> a['notices_count'].to_i }
+    .take(20)
 end
 
 
 File.open('static/top-errors.json', 'w') do |f|
-  f.puts all_issues.to_json
+  f.puts top_issues.to_json
 end
