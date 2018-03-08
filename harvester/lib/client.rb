@@ -4,8 +4,9 @@ require 'active_support'
 require 'active_support/core_ext/hash'
 # A client for the honeybadger api
 class Client
+  ROOT = 'https://app.honeybadger.io/v2'
   def initialize(url, token)
-    @uri = URI(url)
+    @uri = URI(ROOT + url)
     @token = token
   end
 
