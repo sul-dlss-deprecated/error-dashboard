@@ -28,6 +28,7 @@ class FaultReport
     all_issues(project_list)
       .flatten
       .sort_by(&:notices_count)
-      .take(20)
+      .last(20)
+      .reverse
   end
 end

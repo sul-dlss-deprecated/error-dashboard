@@ -13,7 +13,7 @@ class ReportWriter
              hydrus purl-fetcher editstore-updater preservation_catalog assembly
              was-thumbnail-service sul_pub workflow-archiver-job hydra_etd
              revs-indexer-service dor-fetcher-service Hydrox taco was-registrar
-           dor-utils ]
+             dor-utils dor-scripts pre-assembly]
 
   def self.write(token:, path:)
     new(token: token, path: path).write
