@@ -6,7 +6,9 @@
       <table>
         <tr v-for="item in value">
           <td>{{item.project_name}}</td>
-          <td>{{item.created_at}}</td>
+          <td v-if="typeof (item.created_at) !== 'undefined'"><relative-time :time="Date.parse(item.created_at)">{{item.created_at}}</relative-time></td>
+          <td v-else>No recent deploys</td>
+
         </tr>
       </table>
     </div>
@@ -14,6 +16,7 @@
 </template>
 
 <script>
+import "relative-time-vue-component";
 export default {
   name: 'DeployList',
   data () {
