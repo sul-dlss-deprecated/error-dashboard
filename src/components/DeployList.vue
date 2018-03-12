@@ -1,15 +1,12 @@
-/* eslint-disable */
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
     <div v-for="(value, key) in json">
       <h2>{{ key }} </h2>
-
       <table>
         <tr v-for="item in value">
-          <td class="number">{{item.notices_count}}</td>
           <td>{{item.project_name}}</td>
-          <td>{{item.klass}}</td>
+          <td>{{item.created_at}}</td>
         </tr>
       </table>
     </div>
@@ -18,17 +15,17 @@
 
 <script>
 export default {
-  name: 'ErrorList',
+  name: 'DeployList',
   data () {
     return {
       json: null,
-      msg: 'Top errors'
+      msg: 'Last Deploy'
     }
   },
   created: function () {
     // `this` points to the vm instance
     console.log('json is: ' + this.json)
-    fetch('/static/top-errors.json')
+    fetch('/static/deploys.json')
       .then(function (response) {
         return response.json()
       })
@@ -55,10 +52,6 @@ table {
 td {
   padding: .75rem;
   border-top: 1px solid #dee2e6;
-}
-
-.number {
-  text-align: right;
 }
 
 a {

@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <ErrorList/>
+    <DeployList/>
   </div>
 </template>
 
 <script>
 import ErrorList from './components/ErrorList'
+import DeployList from './components/DeployList'
 
 export default {
   name: 'App',
   components: {
-    ErrorList
+    ErrorList,
+    DeployList
   }
 }
 </script>
