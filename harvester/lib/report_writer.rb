@@ -26,7 +26,7 @@ class ReportWriter
 
   def write
     projects_by_group = project_list.group_by { |project| category_for(project) }
-    # write_deploy_report(projects_by_group)
+    write_deploy_report(projects_by_group)
     write_fault_report(projects_by_group)
   end
 
