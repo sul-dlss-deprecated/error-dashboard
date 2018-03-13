@@ -27,7 +27,6 @@ export default {
   },
   created: function () {
     // `this` points to the vm instance
-    console.log('json is: ' + this.json)
     fetch('/static/top-errors.json')
       .then(function (response) {
         return response.json()
@@ -41,27 +40,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-  text-align: center;
-}
-table {
-  width: 45vw;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-}
-
-td {
-  padding: .75rem;
-  border-top: 1px solid #dee2e6;
-}
-
-.number {
-  text-align: right;
-}
-
-a {
-  color: #42b983;
-}
 </style>

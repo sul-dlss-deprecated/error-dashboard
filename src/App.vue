@@ -26,4 +26,25 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+h1, h2 {
+  font-weight: normal;
+  text-align: center;
+}
+table {
+  min-width: 38em;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+td {
+  padding: .75rem;
+  border-top: 1px solid #dee2e6;
+}
+
+a {
+  color: #42b983;
+}
 </style>
