@@ -8,14 +8,16 @@ class ReportWriter
               discovery-dispatcher sw-indexer sul-bento-app colligo mirador_sul
               content_search course_reserves sul-requests library_hours_rails
               sul-directory bassi_veratti demo.projectblacklight.org portfolios
-              dlme rwj_reporting]
+              dlme rwj_reporting arclight-demo MiradorStanford]
   INFRA = %w[gis-robot-suite argo Stacks PURL dor-services-app dor_indexing_app
              hydrus purl-fetcher editstore-updater preservation_catalog assembly
              was-thumbnail-service sul_pub workflow-archiver-job hydra_etd
              revs-indexer-service dor-fetcher-service Hydrox taco was-registrar
              dor-utils dor-scripts pre-assembly was_robot_suite
              common-accessioning etd-robots modsulator-app robot-master
-             item-release goobi-robot sdr-preservation-core sdr-services-app]
+             item-release goobi-robot sdr-preservation-core sdr-services-app
+             dpn-server DLSS-Wowza]
+  IGNORE = %w[HyBox Nurax]
 
   def self.write(token:, path:)
     new(token: token, path: path).write
@@ -45,7 +47,11 @@ class ReportWriter
   end
 
   def project_list
-    @project_list ||= Project.project_list(@token)
+    @project_list ||= Project.project_list(@token).delete_if { |p| ignore?(p) }
+  end
+
+  def ignore?(project)
+    IGNORE.include?(project.name)
   end
 
   def category_for(project)
