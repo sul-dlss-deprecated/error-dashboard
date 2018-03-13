@@ -35,7 +35,7 @@ export default {
   },
   created: function () {
     // `this` points to the vm instance
-    fetch('/static/deploys.json')
+    fetch('./static/deploys.json')
       .then(function (response) {
         return response.json()
       })

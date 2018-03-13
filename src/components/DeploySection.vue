@@ -27,16 +27,6 @@ export default {
         return Date.parse(b.created_at) - Date.parse(a.created_at)
       })
     }
-  },
-  created: function () {
-    // `this` points to the vm instance
-    fetch('./static/deploys.json')
-      .then(function (response) {
-        return response.json()
-      })
-      .then((myJson) => {
-        this.json = myJson
-      })
   }
 }
 </script>
