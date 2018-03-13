@@ -7,8 +7,9 @@ class Issue
   def self.for(project:, token:)
     client = Client.new(faults_path(project.id), token)
     client.results do |res|
+      # don't log message it could have secrets.
       Issue.new res
-        .slice('notices_count', 'klass', 'message', 'url', 'resolved')
+        .slice('notices_count', 'klass', 'url', 'resolved')
         .merge(project_name: project.name)
         .symbolize_keys
     end
