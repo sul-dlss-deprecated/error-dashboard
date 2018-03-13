@@ -6,7 +6,7 @@
       <input type="radio" v-model="filter" value="unassigned"> Unassigned
     </div>
 
-    <DeploySection :list="json[filter]"/>
+    <DeploySection :list="items"/>
   </div>
 </template>
 
@@ -24,6 +24,13 @@ export default {
       filter: 'infrastructure',
       json: null,
       msg: 'Last Deploy'
+    }
+  },
+  computed: {
+    items: function() {
+      if (this.json == null)
+        return []
+      return this.json[this.filter];
     }
   },
   created: function () {

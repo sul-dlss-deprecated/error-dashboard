@@ -8,7 +8,7 @@
     </div>
 
       <table>
-        <tr v-for="item in json[filter]">
+        <tr v-for="item in items">
           <td class="number">{{item.notices_count}}</td>
           <td>{{item.project_name}}</td>
           <td>{{item.klass}}</td>
@@ -27,9 +27,16 @@ export default {
       msg: 'Top errors'
     }
   },
+  computed: {
+    items: function() {
+      if (this.json == null)
+        return []
+      return this.json[this.filter];
+    }
+  },
   created: function () {
     // `this` points to the vm instance
-    fetch('/static/top-errors.json')
+    fetch('./static/top-errors.json')
       .then(function (response) {
         return response.json()
       })
