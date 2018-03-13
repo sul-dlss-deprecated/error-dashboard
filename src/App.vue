@@ -35,17 +35,14 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
-  font-weight: normal;
-  text-align: center;
+.filters {
+  margin: 1em 0em 2em 0em;
 }
 
 table {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   border-collapse: collapse;
 }
-
 
 td {
   padding: .75rem;
@@ -129,7 +126,7 @@ a {
 }
 
 .tabs-component-panels {
-  padding: 4em 0;
+  padding: 1em 0;
 }
 
 @media (min-width: 700px) {
@@ -139,7 +136,7 @@ a {
     border: solid 1px #ddd;
     border-radius: 0 6px 6px 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-    padding: 4em 2em;
+    padding: 1em 2em;
   }
 }
 

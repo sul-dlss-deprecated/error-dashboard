@@ -1,10 +1,12 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div v-for="(value, key) in json">
-      <h2>{{ key }} </h2>
-      <DeploySection :list="value"/>
+    <div class="filters">
+      <input type="radio" v-model="filter" value="infrastructure"> Infrastructure
+      <input type="radio" v-model="filter" value="access"> Access
+      <input type="radio" v-model="filter" value="unassigned"> Unassigned
     </div>
+
+    <DeploySection :list="json[filter]"/>
   </div>
 </template>
 
@@ -19,6 +21,7 @@ export default {
   },
   data () {
     return {
+      filter: 'infrastructure',
       json: null,
       msg: 'Last Deploy'
     }
