@@ -8,7 +8,7 @@ class ReportWriter
               discovery-dispatcher sw-indexer sul-bento-app colligo mirador_sul
               content_search course_reserves sul-requests library_hours_rails
               sul-directory bassi_veratti demo.projectblacklight.org portfolios
-              dlme rwj_reporting arclight-demo MiradorStanford]
+              dlme rwj_reporting arclight-demo]
   INFRA = %w[gis-robot-suite argo Stacks PURL dor-services-app dor_indexing_app
              hydrus purl-fetcher editstore-updater preservation_catalog assembly
              was-thumbnail-service sul_pub workflow-archiver-job hydra_etd
