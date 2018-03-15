@@ -6,10 +6,15 @@ class DeployReport
   end
 
   def to_json
-    deploys.to_json
+    as_json.to_json
   end
 
   private
+
+  def as_json
+    { created_at: Time.now.utc.iso8601,
+      deploys: deploys }
+  end
 
   def deploys
     @projects_by_group.each_with_object({}) do |(k, v), result|

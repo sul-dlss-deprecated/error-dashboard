@@ -7,6 +7,7 @@
     </div>
 
     <DeploySection :list="items"/>
+    <p>generated: {{created}}</p>
   </div>
 </template>
 
@@ -30,7 +31,12 @@ export default {
     items: function() {
       if (this.json == null)
         return []
-      return this.json[this.filter];
+      return this.json["deploys"][this.filter];
+    },
+    created: function() {
+      if (this.json == null)
+        return []
+      return new Date(this.json["created_at"]).toLocaleString("en-US")
     }
   },
   created: function () {

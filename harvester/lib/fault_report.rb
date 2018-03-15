@@ -6,10 +6,15 @@ class FaultReport
   end
 
   def to_json
-    faults.to_json
+    as_json.to_json
   end
 
   private
+
+  def as_json
+    { created_at: Time.now.utc.iso8601,
+      faults: faults }
+  end
 
   def faults
     @projects_by_group.each_with_object({}) do |(k, v), result|
