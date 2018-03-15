@@ -4,20 +4,22 @@ require 'fault_report'
 
 # Writes the two reports for faults and deploys
 class ReportWriter
-  ACCESS = %w[SearchWorks earthworks revs exhibits frda sul-embed
-              discovery-dispatcher sw-indexer sul-bento-app colligo mirador_sul
-              content_search course_reserves sul-requests library_hours_rails
-              sul-directory bassi_veratti demo.projectblacklight.org portfolios
-              dlme rwj_reporting arclight-demo]
+  ACCESS = %w[SearchWorks earthworks revs revs-indexer-service exhibits frda
+              sul-embed discovery-dispatcher sw-indexer sul-bento-app colligo
+              mirador_sul content_search course_reserves sul-requests
+              library_hours_rails sul-directory bassi_veratti
+              demo.projectblacklight.org portfolios dlme rwj_reporting
+              arclight-demo]
   INFRA = %w[gis-robot-suite argo Stacks PURL dor-services-app dor_indexing_app
              hydrus purl-fetcher editstore-updater preservation_catalog assembly
              was-thumbnail-service sul_pub workflow-archiver-job hydra_etd
-             revs-indexer-service dor-fetcher-service Hydrox taco was-registrar
-             dor-utils dor-scripts pre-assembly was_robot_suite
-             common-accessioning etd-robots modsulator-app robot-master
-             item-release goobi-robot sdr-preservation-core sdr-services-app
-             dpn-server DLSS-Wowza]
-  IGNORE = %w[HyBox Nurax]
+             dor-fetcher-service Hydrox taco was-registrar dor-utils dor-scripts
+             pre-assembly was_robot_suite common-accessioning etd-robots
+             modsulator-app robot-master item-release goobi-robot
+             sdr-preservation-core sdr-services-app dpn-server DLSS-Wowza]
+  IGNORE = %w[HyBox
+              Nurax
+              dor-utils] # Ignoring dor-utils because it's a CLI
 
   def self.write(token:, path:)
     new(token: token, path: path).write
