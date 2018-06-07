@@ -13,7 +13,7 @@ class ReportWriter
   INFRA = %w[gis-robot-suite argo Stacks PURL dor-services-app dor_indexing_app
              hydrus purl-fetcher editstore-updater preservation_catalog assembly
              was-thumbnail-service sul_pub workflow-archiver-job hydra_etd
-             dor-fetcher-service Hydrox taco was-registrar dor-utils dor-scripts
+             dor-fetcher-service taco was-registrar dor-utils dor-scripts
              pre-assembly was_robot_suite common-accessioning etd-robots
              modsulator-app robot-master item-release goobi-robot
              sdr-preservation-core sdr-services-app dpn-server DLSS-Wowza]
