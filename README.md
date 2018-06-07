@@ -8,8 +8,12 @@ This harvests some information from Honeybadger to populate a dashboard page
 ## Harvest:
 
 ```
-ruby honeybadger-harvest.rb  <HB_API_KEY>
+cd harvester/
+ruby honeybadger-harvest.rb <HB_API_KEY>
 ```
+
+This produces `static/deploys.json` and `static/top-errors.json`.  These files
+are the data that is read by the VueJS application.
 
 ## Build Setup
 
