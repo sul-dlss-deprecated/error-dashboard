@@ -4,21 +4,62 @@ require 'fault_report'
 
 # Writes the two reports for faults and deploys
 class ReportWriter
-  ACCESS = %w[SearchWorks earthworks revs revs-indexer-service exhibits frda
-              sul-embed discovery-dispatcher sw-indexer sul-bento-app colligo
-              mirador_sul content_search course_reserves sul-requests
-              library_hours_rails sul-directory bassi_veratti
-              demo.projectblacklight.org portfolios dlme rwj_reporting
-              arclight-demo]
-  INFRA = %w[gis-robot-suite argo Stacks PURL dor-services-app dor_indexing_app
-             hydrus purl-fetcher editstore-updater preservation_catalog assembly
-             was-thumbnail-service sul_pub workflow-archiver-job hydra_etd
-             dor-fetcher-service taco was-registrar dor-utils dor-scripts
-             pre-assembly was_robot_suite common-accessioning etd-robots
-             modsulator-app robot-master item-release goobi-robot
-             sdr-preservation-core sdr-services-app dpn-server DLSS-Wowza]
-  IGNORE = %w[HyBox
-              Nurax
+  ACCESS = %w[arclight-demo
+              bassi_veratti
+              colligo
+              content_search
+              course_reserves
+              demo.projectblacklight.org
+              discovery-dispatcher
+              dlme
+              earthworks
+              exhibits
+              frda
+              library_hours_rails
+              mirador_sul
+              revs
+              revs-indexer-service
+              rwj_reporting
+              sul-bento-app
+              sul-directory
+              sul-embed
+              sul-requests
+              sw-indexer
+              portfolios
+              purl-fetcher
+              SearchWorks
+              Stacks
+              PURL]
+  INFRA = %w[argo
+             assembly
+             common-accessioning
+             dpn-server
+             dor-fetcher-service
+             dor_indexing_app
+             dor-services-app
+             dor-scripts
+             dor-utils
+             editstore-updater
+             etd-robots
+             gis-robot-suite
+             goobi-robot
+             hydra_etd
+             hydrus
+             item-release
+             modsulator-app
+             preservation_catalog
+             pre-assembly
+             robot-master
+             sdr-preservation-core
+             sdr-services-app
+             sul_pub
+             taco
+             was-thumbnail-service
+             was-registrar
+             was_robot_suite
+             workflow-archiver-job
+             DLSS-Wowza]
+  IGNORE = %w[Nurax
               dor-utils] # Ignoring dor-utils because it's a CLI
 
   def self.write(token:, path:)
