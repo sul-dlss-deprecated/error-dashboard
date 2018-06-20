@@ -50,7 +50,7 @@ class ReportWriter
              preservation_catalog
              pre-assembly
              robot-master
-             sdr-preservation-core
+             preservation_robots
              sdr-services-app
              sul_pub
              taco
