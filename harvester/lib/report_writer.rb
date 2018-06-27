@@ -17,6 +17,8 @@ class ReportWriter
               frda
               library_hours_rails
               mirador_sul
+              portfolios
+              purl-fetcher
               revs
               revs-indexer-service
               rwj_reporting
@@ -25,8 +27,7 @@ class ReportWriter
               sul-embed
               sul-requests
               sw-indexer
-              portfolios
-              purl-fetcher
+              vatican_exhibits
               SearchWorks
               Stacks
               PURL]
@@ -47,6 +48,7 @@ class ReportWriter
              hydrus
              item-release
              modsulator-app
+             modsulator-app-rails
              preservation_catalog
              pre-assembly
              robot-master
