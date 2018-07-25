@@ -47,7 +47,6 @@ class ReportWriter
              hydra_etd
              hydrus
              item-release
-             modsulator-app
              modsulator-app-rails
              preservation_catalog
              pre-assembly
