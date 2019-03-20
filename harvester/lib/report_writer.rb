@@ -58,7 +58,6 @@ class ReportWriter
              was-thumbnail-service
              was-registrar
              was_robot_suite
-             workflow-archiver-job
              DLSS-Wowza]
   IGNORE = %w[Nurax
               dor-utils] # Ignoring dor-utils because it's a CLI
