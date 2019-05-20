@@ -41,7 +41,6 @@ class ReportWriter
              gis-robot-suite
              hydra_etd
              hydrus
-             item-release
              modsulator-app-rails
              preservation_catalog
              pre-assembly
