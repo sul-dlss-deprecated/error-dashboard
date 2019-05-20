@@ -32,18 +32,13 @@ class ReportWriter
               Stacks
               PURL]
   INFRA = %w[argo
-             assembly
              common-accessioning
-             dpn-server
              dor-fetcher-service
              dor_indexing_app
              dor-services-app
-             dor-scripts
              dor-utils
              editstore-updater
-             etd-robots
              gis-robot-suite
-             goobi-robot
              hydra_etd
              hydrus
              item-release
@@ -54,10 +49,10 @@ class ReportWriter
              preservation_robots
              sdr-services-app
              sul_pub
-             taco
              was-thumbnail-service
              was-registrar
              was_robot_suite
+             workflow-server-rails
              DLSS-Wowza]
   IGNORE = %w[Nurax
               dor-utils] # Ignoring dor-utils because it's a CLI
