@@ -33,26 +33,31 @@ class ReportWriter
               PURL]
   INFRA = %w[argo
              common-accessioning
+             dlme
+             dlme-transform
              dor-fetcher-service
              dor_indexing_app
              dor-services-app
-             dor-utils
-             editstore-updater
              gis-robot-suite
+             google-books
              hydra_etd
              hydrus
+             lyberservices-scripts
              modsulator-app-rails
              preservation_catalog
              pre-assembly
-             robot-master
+             robot-console
              preservation_robots
+             repository-api
+             rialto-etl
+             rialto-webapp
              sdr-services-app
              sul_pub
+             suri_rails
              was-thumbnail-service
-             was-registrar
+             was-registrar-app
              was_robot_suite
-             workflow-server-rails
-             DLSS-Wowza]
+             workflow-server-rails]
   IGNORE = %w[Nurax
               dor-utils] # Ignoring dor-utils because it's a CLI
 
