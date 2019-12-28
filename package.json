@@ -17,7 +17,7 @@
     "relative-time-vue-component": "^4.3.0",
     "vue": "^2.5.2",
     "vue-tabs-component": "^1.4.0",
-    "yarn": "^1.5.1"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
